@@ -3,6 +3,8 @@ var express = require("express");
 var recipes = require("./potato.json");
 var app = express();
 
+app.use(express.static('client'));
+
 app.get("/", function (req, resp) {
 	resp.send("Hello World!");
 });
